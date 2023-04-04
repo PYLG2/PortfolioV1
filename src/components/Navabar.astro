@@ -18,7 +18,7 @@ const linksPage: {label: string; href: string}[] = [
                 <span class="arrow-down rounded-full"></span>
             </div>
             <div id="links-ancre">
-            <ul class="py-2 px-2 bg-violet-900 rounded flex justify-center">{ linksPage.map(({label, href})=><a href= {href} class="py-4 px-4 text-white">{label}</a>)}</ul>
+            <ul class="py-2 px-2 rounded flex justify-center">{ linksPage.map(({label, href})=><a href= {href} class="py-4 px-4 text-white text-xl hover:border-dashed hover:border-4 hover:border-red-300">{label}</a>)}</ul>
             </div>    
     </nav>
 </div>
