@@ -1,81 +1,80 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Presentation from '../components/Presentation.astro';
 import Card from '../components/Card.astro';
+import Resume from '../components/Resume.astro';
+import Contact from '../components/Contact.astro';
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
+<Layout title="Piway's Portofolio">
+	<div class="grid">
+		<div class="grid md:grid-cols-2 gap-8 place-items-center py-12 px-12">
+			<header class="presentation flex flex-col items-center">
+				<Presentation
+					title="Pierre-Yves Base"
+					short="I am in the process to become a Junior Developper and to developp some awesome application."
+				/>
+			</header>
+			<img
+				class="pic rounded-full animate-pulse object-top object-cover aspect-auto w-80 h-80"
+				alt="Gundam pic"
+				src="/assets/gundam.png"
+			/>
+			
+		</div>
+		<div class="container mx-auto w-40 py-8 px-8">
+			<div class=" animate-bounce w-full flex justify-center py-8 px-4 items-center rounded-full border-4" >
+				<span class="arrow-down"></span>
+			</div>
+		</div>
+	
+	<main class=" py-4 px-4 ">
+		
+		<div id="work" class=" container mx-auto flex justify-center py-8 px-8">
+			<h2 class="text-white text-4xl py-2 max-w-3xl">Work</h2>
+		</div>
+		<div id="card-work" class="grid grid-cols-2 place-items-center gap-8">
 			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
+			title="test"
+			body="ddddd"
+			href="ddddddddddd"
 			/>
 			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
+			title="test"
+			body="ddddd"
+			href="ddddddddddd"
 			/>
 			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
+			title="test"
+			body="ddddd"
+			href="ddddddddddd"
 			/>
 			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
+			title="test"
+			body="ddddd"
+			href="ddddddddddd"
 			/>
-		</ul>
+		</div>
+		<Resume title="Resume"/>
+		<Contact/>
 	</main>
+</div>
 </Layout>
 
 <style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
+	/* .pic{
+		aspect-ratio: 5 / 4;
+		object-fit: cover;
+		object-position: top;
+		border-radius: 1.5rem;
+	} */
+
+	.arrow-down {
+  width: 12px;
+  height: 12px;
+  border: 2px solid #f0eded;
+  border-left: 0;
+  border-top: 0;
+  transform: rotate(45deg);
+}
 </style>

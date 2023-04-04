@@ -1,0 +1,14 @@
+---
+interface Props{
+    title?: string | undefined;
+    short?: string | undefined; 
+}
+
+const {title, short} = Astro.props;
+---
+
+<header class="py-4 px-4">
+        <h1 class="text-white text-7xl py-2 max-w-3xl">{title}</h1>
+        <p class="text-slate-300 text-xl max-w-2xl">{short}</p>
+  
+</header>
