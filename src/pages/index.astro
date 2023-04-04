@@ -8,57 +8,60 @@ import Contact from '../components/Contact.astro';
 
 <Layout title="Piway's Portofolio">
 	<div class="grid">
-		<div class="grid md:grid-cols-2 gap-8 place-items-center py-12 px-12">
-			<header class="presentation flex flex-col items-center">
-				<Presentation
-					title="Pierre-Yves Base"
-					short="I am in the process to become a Junior Developper and to developp some awesome application."
+		<div class="border-dashed border-y-4">
+			<div class="grid md:grid-cols-2 gap-8 place-items-center py-12 px-12">
+				<header class="presentation flex flex-col items-center">
+					<Presentation
+						title="Pierre-Yves Base"
+						short="I am in the process to become a Junior Developper and to developp some awesome application."
+					/>
+				</header>
+				<img
+					class="pic rounded-full animate-pulse object-top object-cover aspect-auto w-80 h-80"
+					alt="Gundam pic"
+					src="/assets/gundam.png"
 				/>
-			</header>
-			<img
-				class="pic rounded-full animate-pulse object-top object-cover aspect-auto w-80 h-80"
-				alt="Gundam pic"
-				src="/assets/gundam.png"
-			/>
-			
-		</div>
-		<div class="container mx-auto w-40 py-8 px-8">
-			<div class=" animate-bounce w-full flex justify-center py-8 px-4 items-center rounded-full border-4" >
-				<span class="arrow-down"></span>
+				
+			</div>
+			<div class="container mx-auto w-40 py-8 px-8 ">
+				<div class="animate-bounce w-full flex justify-center py-8 px-4 items-center rounded-full border-4" >
+					<span class="arrow-down"></span>
+				</div>
 			</div>
 		</div>
 	
-	<main class=" py-4 px-4 ">
-		
-		<div id="work" class=" container mx-auto flex justify-center py-8 px-8">
-			<h2 class="text-white text-4xl py-2 max-w-3xl">Work</h2>
-		</div>
-		<div id="card-work" class="grid grid-cols-2 place-items-center gap-8">
-			<Card
-			title="test"
-			body="ddddd"
-			href="ddddddddddd"
-			/>
-			<Card
-			title="test"
-			body="ddddd"
-			href="ddddddddddd"
-			/>
-			<Card
-			title="test"
-			body="ddddd"
-			href="ddddddddddd"
-			/>
-			<Card
-			title="test"
-			body="ddddd"
-			href="ddddddddddd"
-			/>
-		</div>
-		<Resume title="Resume"/>
-		<Contact/>
-	</main>
-</div>
+		<main class=" py-4 px-4 ">
+			<div id="work" class="border-dashed border-b-4">
+				<div  class=" container mx-auto flex justify-center py-8 px-8">
+					<h2 class="text-white text-4xl py-2 max-w-3xl">Work</h2>
+				</div>
+				<div id="card-work" class="grid grid-cols-2 place-items-center gap-8">
+					<Card
+					title="test"
+					body="ddddd"
+					href="ddddddddddd"
+					/>
+					<Card
+					title="test"
+					body="ddddd"
+					href="ddddddddddd"
+					/>
+					<Card
+					title="test"
+					body="ddddd"
+					href="ddddddddddd"
+					/>
+					<Card
+					title="test"
+					body="ddddd"
+					href="ddddddddddd"
+					/>
+				</div>
+			</div>
+			<Resume title="Resume"/>
+			<Contact/>
+		</main>
+    </div>
 </Layout>
 
 <style>
