@@ -8,7 +8,7 @@ import Contact from '../components/Contact.astro';
 
 <Layout title="Piway's Portofolio">
 	<div class="grid">
-		<div class="border-dashed border-y-4">
+		<div class="border-dashed border-y-4 overflow-hidden">
 			<div class="grid md:grid-cols-2 gap-8 place-items-center py-12 px-12">
 				<header class="presentation flex flex-col items-center">
 					<Presentation
@@ -27,7 +27,9 @@ import Contact from '../components/Contact.astro';
 				<div class="animate-bounce w-full flex justify-center py-8 px-4 items-center rounded-full border-4" >
 					<span class="arrow-down"></span>
 				</div>
+				<img id="myImage" src="/assets/stapler.svg" class="w-18 h-12">
 			</div>
+			
 		</div>
 	
 		<main class=" py-4 px-4 ">
@@ -64,6 +66,21 @@ import Contact from '../components/Contact.astro';
     </div>
 </Layout>
 
+<script>
+    var img = document.getElementById("myImage");
+    var pos = 0;
+    var id = setInterval(frame, 10);
+    function frame() {
+      if (pos >= window.innerWidth - img.width) {
+        pos = 0;
+        img.style.left = pos + "px";
+      } else {
+        pos++;
+        img.style.left = pos + "px";
+      }
+    }
+  </script>
+
 <style>
 	/* .pic{
 		aspect-ratio: 5 / 4;
@@ -80,4 +97,9 @@ import Contact from '../components/Contact.astro';
   border-top: 0;
   transform: rotate(45deg);
 }
+
+#myImage {
+      position: absolute;
+      left: 0;
+    }
 </style>
